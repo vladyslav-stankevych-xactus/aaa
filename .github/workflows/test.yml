@@ -9,4 +9,4 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: App Settings Variable Substitution
-      run: echo ${{ fromJson(secrets.TEST).DbSettings }}
+      run: echo "test ${{ fromJson(secrets.TEST).DbSettings }}"
