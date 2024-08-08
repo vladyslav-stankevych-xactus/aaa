@@ -1,0 +1,12 @@
+name: 'whatever'
+run-name: 'whatever'
+
+on:
+ workflow_dispatch:
+
+jobs:
+  DEV:
+    runs-on: windows-latest
+    steps:
+    - name: App Settings Variable Substitution
+      run: echo ${{ fromJson(secrets.TEST) }}
